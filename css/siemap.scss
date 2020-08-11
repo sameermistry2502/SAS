@@ -1,0 +1,46 @@
+.mj-sitemap {
+  position: relative;
+  
+  &,
+  ul {
+    list-style: none;
+  }
+  
+
+  li {
+    position: relative;
+    padding: 1em;
+
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-width: 1px;
+      z-index: 0;
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: -1.1em;
+      height: 150%;
+      border-top-style: none;
+      border-left-style: solid;
+    }
+
+    &:after {
+      top: 1.5em;
+      left: -1.1em;
+      width: 1.5em;
+      border-top-style: solid;
+    }
+
+    &:last-child {
+      &:before {
+        border-left: none;
+      }
+    }
+  }
+}
